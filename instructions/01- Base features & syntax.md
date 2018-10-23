@@ -11,7 +11,7 @@
 return React.createElement('div', null, React.createElement('h1'), null, 'this is React intro 2')
 ```
 
-4. Now we can create functional component for our new app.
+5. Now we can create functional component for our new app.
 
 ```js
 import React from 'react'
@@ -28,7 +28,7 @@ export default companyCard;
 
 ```
 
-5.Outputting Dynamic content - props & state
+6.Outputting Dynamic content - props & state
 
 ** props allow you to pass data down the component tree, and state is used to change the component, and changes to state also trigger an UI update.
 
@@ -72,7 +72,7 @@ The CompanyCard component receives this `props` argument. React will pass one ar
 
 `{props.name}` and `{props.people}` then dynamically output the `name` and `people` property of the `props`object - which is available since we set the `name` and `people` property inside `App` component (see above)
  
-6.Ok next, we will create `switchCompanyHandler` function, add function code just above `render()`method.
+7.Ok next, we will create `switchCompanyHandler` function, add function code just above `render()`method.
 
 ```js
 switchCompanyHandler = () => {
