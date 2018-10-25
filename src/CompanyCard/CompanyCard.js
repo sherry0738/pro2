@@ -1,15 +1,15 @@
 import React from "react";
 import "./CompanyCard.css";
-import Radium from "radium";
+// import Radium from "radium";
 
 const companyCard = props => {
-  const style = {
-    "@media(min-width: 500px": {
-      width: "450px"
-    }
-  };
+  // const style = {
+  //   "@media(min-width: 500px": {
+  //     width: "450px"
+  //   }
+  // };
   return (
-    <div className="CompanyCard" style={style}>
+    <div className="CompanyCard">
       {/* <p>{props.name} has {props.people} people.</p> */}
       <p onClick={props.click}>
         {props.name} has {props.people} people.
@@ -23,4 +23,4 @@ const companyCard = props => {
     //   </div>
   );
 };
-export default Radium(companyCard);
+export default companyCard;
