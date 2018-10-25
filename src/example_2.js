@@ -147,3 +147,7 @@ class App extends Component {
 }
 
 export default App;
+
+// -----------S1---------------------
+// 1. npm install --save Radium, import Radium, { StyleRoot }, export, add <StyleRoot></StyleRoot>. --- then  remove Radium
+// 2. eject :

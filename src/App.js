@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import CompanyCard from "./CompanyCard/CompanyCard";
 import "./App.css";
+import Radium, { StyleRoot } from "radium";
 import { white } from "ansi-colors";
 
 class App extends Component {
@@ -61,7 +62,11 @@ class App extends Component {
       font: "inherit",
       border: "1px solid blue",
       padding: "8px",
-      cursor: "pointer"
+      cursor: "pointer",
+      ":hover": {
+        backgroundColor: "lightyellow",
+        color: "black"
+      }
     };
 
     let companis = null;
@@ -106,22 +111,23 @@ class App extends Component {
     }
 
     return (
-      <div className="App">
-        <header className="App-header">
-          <h1>This is React intro 2.</h1>
-          <p className={classes.join(" ")}>
-            And it's the 2nd step for react study
-          </p>
-        </header>
-        <button
-          style={style}
-          // onClick={this.switchCompanyHandler}
-          onClick={this.togglePersonHandler}
-        >
-          Toggle Company
-        </button>
-        {companis}
-        {/* <div>
+      <StyleRoot>
+        <div className="App">
+          <header className="App-header">
+            <h1>This is React intro 2.</h1>
+            <p className={classes.join(" ")}>
+              And it's the 2nd step for react study
+            </p>
+          </header>
+          <button
+            style={style}
+            // onClick={this.switchCompanyHandler}
+            onClick={this.togglePersonHandler}
+          >
+            Toggle Company
+          </button>
+          {companis}
+          {/* <div>
 
             <button onClick={()=>this.switchCompanyHandler('Harvard')}>Switch Company</button>
             <CompanyCard name="Zusdesk" people="1000"/>
@@ -140,10 +146,11 @@ class App extends Component {
             <CompanyCard name={this.state.companis[2].name} people={this.state.companis[2].people}/>
             
           </div>  */}
-      </div>
+        </div>
+      </StyleRoot>
     );
     // return React.createElement('div', null, React.createElement('h1'), null, 'this is React intro 2')
   }
 }
 
-export default App;
+export default Radium(App);
