@@ -1,6 +1,8 @@
 import React, { Component } from "react";
 import CompanyCard from "./CompanyCard/CompanyCard";
-import cssClasses from "./App.css";
+// import "./App.css";
+// import cssClasses from "./App.css";
+const cssClasses = require("./App.css");
 // import Radium, { StyleRoot } from "radium";
 // import { white } from "ansi-colors";
 
@@ -104,13 +106,16 @@ class App extends Component {
     // let classes = ["red", "bold"].join(" ");
     const classes = [];
     if (this.state.companis.length <= 2) {
+      // classes.push("red");
       classes.push(cssClasses.red);
     }
     if (this.state.companis.length <= 1) {
+      // classes.push("bold");
       classes.push(cssClasses.bold);
     }
 
     return (
+      // <div className={"App"}>
       <div className={cssClasses.App}>
         <header className="App-header">
           <h1>This is React intro 2.</h1>
