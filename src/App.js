@@ -1,8 +1,10 @@
 import React, { Component } from "react";
 import CompanyCard from "./CompanyCard/CompanyCard";
 // import "./App.css";
+import cssClasses from "./App.css";
 // import cssClasses from "./App.css";
-const cssClasses = require("./App.css");
+// const cssClasses = require("./App.css");
+console.log(cssClasses);
 // import Radium, { StyleRoot } from "radium";
 // import { white } from "ansi-colors";
 
