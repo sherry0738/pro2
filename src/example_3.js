@@ -150,4 +150,66 @@ export default App;
 
 // -----------S1---------------------
 // 1. npm install --save Radium, import Radium, { StyleRoot }, export, add <StyleRoot></StyleRoot>. --- then  remove Radium
-// 2. eject :
+// 2. eject : do not use 'npm run eject', use 'yarn eject', 
+// 3. webpack.config.dev.js  ------>
+                        {
+                          test: cssRegex,
+                          // exclude: cssModuleRegex,
+                          use: getStyleLoaders({
+                            importLoaders: 1,
+                            modules: true,
+                            getLocalIdent: getCSSModuleLocalIdent
+                          })
+                        },
+                        // Adds support for CSS Modules (https://github.com/css-modules/css-modules)
+                        // using the extension .module.css
+                        // {
+                        //   test: cssModuleRegex,
+                        //   use: getStyleLoaders({
+                        //     importLoaders: 1,
+                        //     modules: true,
+                        //     getLocalIdent: getCSSModuleLocalIdent,
+                        //   }),
+                        // },
+
+// 4. webpack.config.prod.js  ------>
+              // {
+                        //   test: cssRegex,
+                        //   exclude: cssModuleRegex,
+                        //   loader: getStyleLoaders({
+                        //     importLoaders: 1,
+                        //     sourceMap: shouldUseSourceMap,
+                        //   }),
+                        // Don't consider CSS imports dead code even if the
+                        // containing package claims to have no side effects.
+                        // Remove this when webpack adds a warning or an error for this.
+                        // See https://github.com/webpack/webpack/issues/6571
+                        //   sideEffects: true,
+                        // },
+                        // Adds support for CSS Modules (https://github.com/css-modules/css-modules)
+                        // using the extension .module.css
+                        {
+                          test: cssRegex,
+                          loader: getStyleLoaders({
+                            importLoaders: 1,
+                            sourceMap: shouldUseSourceMap,
+                            modules: true,
+                            getLocalIdent: getCSSModuleLocalIdent
+                          })
+                        },
+// 5. import css module variable (name one and import)
+// 6.  ----------css modules var into the code and update the var name--------
+if (this.state.companis.length <= 2) {
+  // classes.push("red");
+  classes.push(cssClasses.red);
+}
+if (this.state.companis.length <= 1) {
+  // classes.push("bold");
+  classes.push(cssClasses.bold);
+}
+
+return (
+  // <div className={"App"}>
+  <div className={cssClasses.App}>       </div>             
+
+// 7. 

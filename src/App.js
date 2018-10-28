@@ -2,9 +2,6 @@ import React, { Component } from "react";
 import CompanyCard from "./CompanyCard/CompanyCard";
 // import "./App.css";
 import cssClasses from "./App.css";
-// import cssClasses from "./App.css";
-// const cssClasses = require("./App.css");
-console.log(cssClasses);
 // import Radium, { StyleRoot } from "radium";
 // import { white } from "ansi-colors";
 
@@ -61,19 +58,24 @@ class App extends Component {
   };
 
   render() {
-    const style = {
-      backgroundColor: "lightblue",
-      font: "inherit",
-      border: "1px solid blue",
-      padding: "8px",
-      cursor: "pointer"
-      // ":hover": {
-      //   backgroundColor: "lightyellow",
-      //   color: "black"
-      // }
-    };
+    // ------------comment out after yarn eject and config CSS module------------
+    // const style = {
+    //   backgroundColor: "lightblue",
+    //   font: "inherit",
+    //   border: "1px solid blue",
+    //   padding: "8px",
+    //   cursor: "pointer"
+    // ------------comment out after Radium practice ----------
+    // ":hover": {
+    //   backgroundColor: "lightyellow",
+    //   color: "black"
+    // }
+    // };
 
     let companis = null;
+    // ----------S1 after config CSS module and works -----------
+    let btnClass = "";
+
     if (this.state.showCompanies) {
       companis = (
         <div>
@@ -100,8 +102,10 @@ class App extends Component {
             <CompanyCard name={this.state.companis[2].name} people={this.state.companis[2].people}/> */}
         </div>
       );
-      // ------------------------ This is Step 1 for styling -------------------------------------
-      style.backgroundColor = "red";
+      // style.backgroundColor = "red";
+
+      // ----------S1 after config CSS module and works -----------
+      btnClass = cssClasses.Red;
     }
 
     // ------------------------ This is Step 2 for styling -------------------------------------
@@ -120,13 +124,14 @@ class App extends Component {
       // <div className={"App"}>
       <div className={cssClasses.App}>
         <header className="App-header">
-          <h1>This is React intro 2.</h1>
+          <h1>This is RXXXX 2.</h1>
           <p className={classes.join(" ")}>
             And it's the 2nd step for react study
           </p>
         </header>
         <button
-          style={style}
+          // style={style}
+          className={btnClass}
           // onClick={this.switchCompanyHandler}
           onClick={this.togglePersonHandler}
         >

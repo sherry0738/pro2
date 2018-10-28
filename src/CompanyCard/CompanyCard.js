@@ -1,5 +1,5 @@
 import React from "react";
-import "./CompanyCard.css";
+import cssClasses from "./CompanyCard.css";
 // import Radium from "radium";
 
 const companyCard = props => {
@@ -9,7 +9,7 @@ const companyCard = props => {
   //   }
   // };
   return (
-    <div className="CompanyCard">
+    <div className={cssClasses.companyCard}>
       {/* <p>{props.name} has {props.people} people.</p> */}
       <p onClick={props.click}>
         {props.name} has {props.people} people.
