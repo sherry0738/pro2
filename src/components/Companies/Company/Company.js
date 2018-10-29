@@ -1,15 +1,15 @@
 import React from "react";
-import cssClasses from "./CompanyCard.css";
+import cssClasses from "./Company.css";
 // import Radium from "radium";
 
-const companyCard = props => {
+const company = props => {
   // const style = {
   //   "@media(min-width: 500px": {
   //     width: "450px"
   //   }
   // };
   return (
-    <div className={cssClasses.companyCard}>
+    <div className={cssClasses.company}>
       {/* <p>{props.name} has {props.people} people.</p> */}
       <p onClick={props.click}>
         {props.name} has {props.people} people.
@@ -23,4 +23,4 @@ const companyCard = props => {
     //   </div>
   );
 };
-export default companyCard;
+export default company;

@@ -2,16 +2,17 @@
   text-align: center;
   font-size: 25px;
 }
-.red {
+
+/* .red {
   color: red;
 }
 
 .bold {
   font-weight: bold;
-}
+} */
 
 /* ------------comment out after yarn eject and config CSS module------------ */
-.App button {
+/* .App button {
   border : 1px solid blue;
   padding: 16px;
   background-color: green;
@@ -60,4 +61,4 @@
   to {
     transform: rotate(360deg);
   }
-} */
+} */ 

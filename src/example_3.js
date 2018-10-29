@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import CompanyCard from "./CompanyCard/CompanyCard";
+import Company from "./Company/Company";
 import "./App.css";
 import { white } from "ansi-colors";
 
@@ -70,7 +70,7 @@ class App extends Component {
         <div>
           {this.state.companis.map((company, index) => {
             return (
-              <CompanyCard
+              <Company
                 click={() => this.deleteCompanyHandler(index)}
                 name={company.name}
                 people={company.people}
@@ -79,16 +79,16 @@ class App extends Component {
               />
             );
           })}
-          {/* <CompanyCard name={this.state.companis[0].name} people={this.state.companis[0].people}/>
-          <CompanyCard 
+          {/* <Company name={this.state.companis[0].name} people={this.state.companis[0].people}/>
+          <Company 
               name={this.state.companis[1].name} 
               people={this.state.companis[1].people}
               nameChange={this.nameChangehandle}
               click={this.switchCompanyHandler.bind(this, 'Harvard')}
               click={this.switchCompanyHandler.bind(this, 'Xeiver')} >
               Special company  
-            </CompanyCard>
-            <CompanyCard name={this.state.companis[2].name} people={this.state.companis[2].people}/> */}
+            </Company>
+            <Company name={this.state.companis[2].name} people={this.state.companis[2].people}/> */}
         </div>
       );
       // ------------------------ This is Step 1 for styling -------------------------------------
@@ -124,20 +124,20 @@ class App extends Component {
         {/* <div>
 
             <button onClick={()=>this.switchCompanyHandler('Harvard')}>Switch Company</button>
-            <CompanyCard name="Zusdesk" people="1000"/>
-            <CompanyCard name="Xeso" people="2000" >Special company</CompanyCard>
-            <CompanyCard name="Saek" people="1500"/>
+            <Company name="Zusdesk" people="1000"/>
+            <Company name="Xeso" people="2000" >Special company</Company>
+            <Company name="Saek" people="1500"/>
 
-            <CompanyCard name={this.state.companis[0].name} people={this.state.companis[0].people}/>
-            <CompanyCard 
+            <Company name={this.state.companis[0].name} people={this.state.companis[0].people}/>
+            <Company 
               name={this.state.companis[1].name} 
               people={this.state.companis[1].people}
               nameChange={this.nameChangehandle}
               click={this.switchCompanyHandler.bind(this, 'Harvard')}>
               click={this.switchCompanyHandler.bind(this, 'Xeiver')} >
               Special company  
-            </CompanyCard>
-            <CompanyCard name={this.state.companis[2].name} people={this.state.companis[2].people}/>
+            </Company>
+            <Company name={this.state.companis[2].name} people={this.state.companis[2].people}/>
             
           </div>  */}
       </div>
@@ -152,6 +152,7 @@ export default App;
 // 1. npm install --save Radium, import Radium, { StyleRoot }, export, add <StyleRoot></StyleRoot>. --- then  remove Radium
 // 2. eject : do not use 'npm run eject', use 'yarn eject', 
 // 3. webpack.config.dev.js  ------>
+const weHaveToChangeHere =
                         {
                           test: cssRegex,
                           // exclude: cssModuleRegex,
@@ -188,6 +189,7 @@ export default App;
                         // },
                         // Adds support for CSS Modules (https://github.com/css-modules/css-modules)
                         // using the extension .module.css
+                        const weAlsoHaveToChangeHere =
                         {
                           test: cssRegex,
                           loader: getStyleLoaders({
@@ -212,4 +214,4 @@ return (
   // <div className={"App"}>
   <div className={cssClasses.App}>       </div>             
 
-// 7. 
+// 7. ----
