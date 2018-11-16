@@ -4,7 +4,13 @@ import "./CompanyCard.css";
 const companyCard = props => {
   return (
     <div>
-      <p>Zusdesk has 1000 people</p>
+      {/* <p>Zusdesk has {Math.floor(Math.random() * 3000)} people</p> */}
+      {/* <p>zusdesk has {props.people} people</p> */}
+      {/* <p>
+        {props.name} has {props.people} people
+      </p> */}
+
+      {/* <p>{props.children}</p> */}
     </div>
   );
 };
